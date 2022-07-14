@@ -29,7 +29,17 @@ function loadFromFile() {
 }
 
 let questions = JSON.parse(loadFromFile());
-var audio = new Audio("../sounds/click.mp3");
+
+// Write Javascript code!
+const sound = new Audio(
+  '../sounds/click.mp3'
+);
+const ansID = document.getElementById('ansID');
+ansID.addEventListener('click', soundHandler);
+
+function soundHandler() {
+  sound.play();
+}
 
 startGame = () => {
     questionCounter = 0;
@@ -81,7 +91,7 @@ const getNewQuestion = () => {
             const anwseredLetter = clickedAnswer.dataset["answer"];
 
             let classToApply = "incorrect";
-            audio.play();
+            sound.play();
             if (anwseredLetter === currentQuestion.answer) {
                 console.log(currentQuestion.mark);
                 score = currentQuestion.mark + score;
@@ -135,7 +145,7 @@ function wlcFunc() {
   document.getElementById("wlc").style.display = "none";
   document.getElementById("qcard").style.display = "block";
   document.getElementById("scoreBoard").style.display = "block";
-  audio.play();
+  sound.play();
 }
 
 restart.addEventListener("click", startGame);
