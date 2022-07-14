@@ -1,0 +1,10 @@
+{
+  "name": "friendshipt_fun_app",
+  "version": "1.0.0",
+  "description": "personalized friendship fun facts  app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pro Rasel"
+}

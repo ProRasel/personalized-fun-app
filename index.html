@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>বন্ধুত্বের গভীরতা সম্পর্কে জানুন</title>
+    <!-- MDB icon -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/prorasel.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+    />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+    />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+  </head>
+  <body class="">
+    <!-- Start your project here-->
+    <div class="bg">
+    <div class="container">
+      <div id="scoreBoard" class="score-board">
+      <div id="intro">
+          <div class="counter">
+            <p class="data-info">প্রশ্ন:</p>
+            <h1 id="counter"></h1>
+          </div>
+          <div class="score">
+            <p class="data-info">স্কোর:</p>
+            <h1 id="score"></h1>
+          </div>
+      </div>
+    </div>
+
+      <div class="question-holder row qcard" id="qcard">
+        <div class="col-12">
+          <h1 id="question">What is the answer to this question?</h1>
+        </div>
+      
+        <div class="row" style="margin: 0;padding: 10px 0;">
+          <div class="col-xl-4 col-sm-6 col-12 mb-1">
+            <div class="card answer-container cardbox">
+              <div class="card-body">
+                <div class="d-flex justify-content-start px-md-1">
+                  <div class="align-self-center">
+                    <p class="answer-prefix">A</p>
+                  </div>
+                  <div class="text-start">
+                    <p class="answer-text" data-answer="a">Answer A</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-sm-6 col-12 mb-1">
+            <div class="card answer-container cardbox">
+              <div class="card-body">
+                <div class="d-flex justify-content-start px-md-1">
+                  <div class="align-self-center">
+                    <p class="answer-prefix">B</p>
+                  </div>
+                  <div class="text-start">
+                    <p class="answer-text" data-answer="b">Answer B</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+            <div class="col-xl-4 col-sm-6 col-12 mb-1">
+              <div class="card answer-container cardbox">
+                <div class="card-body">
+                  <div class="d-flex justify-content-start px-md-1">
+                    <div class="align-self-center">
+                      <p class="answer-prefix">C</p>
+                    </div>
+                    <div class="text-start">
+                      <p class="answer-text" data-answer="c">Answer C</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        
+        <div id="wlc" class="question-holder row">
+          <div class="col-12">
+            <h1 class="wlc-text">ফ্রেন্ডলিস্টের কে আমার কতটুকু ক্লোজ? চলুন দেখা যাক।😊</h1>
+          </div>
+        
+          <div class="row" style="margin: 0;">
+            <div class="col-md-8 mb-4" style="margin: 0 auto;">
+              <div class="col-md-5" style="display: block;margin: 0 auto;" >
+                <IMG SRC="img/70131-beach.gif" class="wlc-img">
+                <button
+                type="button"
+                class="btn btn-primary wlc-btn"
+                data-mdb-dismiss="modal"
+                onclick="wlcFunc()">
+                Let's Start
+              </button>
+              </div>
+          </div>
+            </div>
+
+            
+          </div>
+          
+          <div class="row" style="margin: 0;">
+            <div class="social-area col-lg-12 mb-4" style="margin: 0 auto;">
+                <a class="btn btn-primary btn-lg btn-floating" style="background-color: #3b5998;" href="https://www.facebook.com/IT.ProRasel/" target="_blank" role="button" ><i class="fab fa-facebook me-social"></i ></a>
+                <a class="btn btn-primary btn-lg btn-floating" style="background-color: #0082ca;" href="https://www.linkedin.com/in/prorasel/" target="_blank" role="button" ><i class="fab fa-linkedin me-social"></i ></a>
+                <a class="btn btn-primary btn-lg btn-floating" style="background-color: #ed302f;" href="https://www.youtube.com/c/ProRaseL" target="_blank" role="button" ><i class="fab fa-youtube me-social"></i ></a>
+                <a class="btn btn-primary btn-lg btn-floating" style="background-color: #E4405F;" href="https://www.instagram.com/pro.rasel/" target="_blank" role="button" ><i class="fab fa-instagram me-social"></i ></a>
+                <a class="btn btn-primary btn-lg btn-floating" style="background-color: #183153;" href="https://prorasel.com/" target="_blank" role="button" ><i class="fas fa-globe me-social"></i ></a>
+            </div>
+          </div>
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal top fade" id="endGameModal" tabindex="-1" aria-labelledby="exampleModal2Label"
+  aria-hidden="true" data-mdb-backdrop="static" data-mdb-keyboard="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Result</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-mdb-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div id="modal-body">...</div>
+            <h1 class="ResultMessage" id="ResultText">...</h1>
+            <IMG id="result_IMG" SRC="https://c.tenor.com/lD1FPe0jMYMAAAAC/gifgari-bangla-gif.gif">
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-mdb-dismiss="modal"
+              id="restart">
+              Restart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- End your project here-->
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
