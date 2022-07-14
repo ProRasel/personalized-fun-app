@@ -31,7 +31,7 @@ function loadFromFile() {
 let questions = JSON.parse(loadFromFile());
 
 function start() {
-    audio_object = new Audio("click.mp3");
+    audio_object = new Audio("js/audio/click.mp3");
     window.playResult = audio_object.play();
     playResult.catch(e => {
         window.playResultError = e;
