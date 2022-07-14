@@ -30,16 +30,18 @@ function loadFromFile() {
 
 let questions = JSON.parse(loadFromFile());
 
-// Write Javascript code!
-const sound = new Audio(
-  '../sounds/click.mp3'
-);
-const ansID = document.getElementById('ansID');
-ansID.addEventListener('click', soundHandler);
-
-function soundHandler() {
-  sound.play();
+function playMusic(){
+    var promise = new Audio("../sounds/click.mp3").play();
+    if (promise !== undefined) {
+        promise.then(_ => {
+            console.log('Autoplay started!');
+        }).catch(error => {
+            console.log('Autoplay was prevented.');
+        });
+    }
 }
+
+var audio = new Audio("../sounds/click.mp3");
 
 startGame = () => {
     questionCounter = 0;
@@ -91,7 +93,7 @@ const getNewQuestion = () => {
             const anwseredLetter = clickedAnswer.dataset["answer"];
 
             let classToApply = "incorrect";
-            sound.play();
+            playMusic();
             if (anwseredLetter === currentQuestion.answer) {
                 console.log(currentQuestion.mark);
                 score = currentQuestion.mark + score;
@@ -145,7 +147,7 @@ function wlcFunc() {
   document.getElementById("wlc").style.display = "none";
   document.getElementById("qcard").style.display = "block";
   document.getElementById("scoreBoard").style.display = "block";
-  sound.play();
+  playMusic();
 }
 
 restart.addEventListener("click", startGame);
