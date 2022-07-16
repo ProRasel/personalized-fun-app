@@ -6,7 +6,12 @@ const restart = document.getElementById("restart");
 
 let questionCounter;
 let score;
-const MAX_QUESTIONS = 10;
+const MAX_QUESTIONS = 1;
+
+var resultID = document.getElementById("resultID");
+var qcard = document.getElementById("qcard")
+var scoreBoard = document.getElementById("scoreBoard")
+var wlc = document.getElementById("wlc")
 
 let acceptingAnswers;
 
@@ -111,7 +116,8 @@ const getNewQuestion = () => {
 };
 
 displayResults = () => {
-    const modal = new mdb.Modal(endGameModal);
+//    const modal =const modal = new mdb.Modal(endGameModal);
+    const modal = document.getElementById("resultID");
     const modalBody = document.getElementById("modal-body");
     const resultMessage = document.getElementById("ResultText");
     ResultText;
@@ -136,15 +142,50 @@ displayResults = () => {
         resultMessage.innerText = "ওমা গো ট্রু লাভ 💯😍";
         document.getElementById("result_IMG").src = "https://c.tenor.com/9VEBCPVHlf0AAAAC/bengali-love.gif";
     }
-    modal.show();
+//    modal.show();
+    qcard.style.display = "none";
+    resultID.style.display = "block";
+    scoreBoard.style.display = "none";
     acceptingAnswers = false;
 };
 function wlcFunc() {
-  document.getElementById("wlc").style.display = "none";
-  document.getElementById("qcard").style.display = "block";
-  document.getElementById("scoreBoard").style.display = "block";
+  wlc.style.display = "none";
+  qcard.style.display = "block";
+  scoreBoard.style.display = "block";
   start();
 }
 
-restart.addEventListener("click", startGame);
-startGame();
+
+function downloadimage() {
+    var container = document.querySelector('#resultID');
+    html2canvas(container, {
+        scale:1.5,
+        useCORS: true,
+        allowTaint: true,
+    }).then(function(canvas) {
+        console.log(canvas);
+        saveAs(canvas.toDataURL(), 'result.png');
+    });
+    function saveAs(uri, filename) {
+        var link = document.createElement('a');
+        if (typeof link.download === 'string') {
+            link.href = uri;
+            link.download = filename;
+            link.click();
+        } else {
+            window.open(uri);
+        }
+    }
+}
+
+function startFunc() {
+    restart.addEventListener("click", startGame);
+    resultID.style.display = "none";
+    qcard.style.display = "block";
+    scoreBoard.style.display = "block";
+    startGame();
+    console.log("Clicked")
+  }
+  startFunc()
+  qcard.style.display = "none";
+  scoreBoard.style.display = "none";
