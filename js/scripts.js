@@ -6,7 +6,7 @@ const restart = document.getElementById("restart");
 
 let questionCounter;
 let score;
-const MAX_QUESTIONS = 1;
+const MAX_QUESTIONS = 10;
 
 var resultID = document.getElementById("resultID");
 var qcard = document.getElementById("qcard")
