@@ -135,7 +135,7 @@ displayResults = () => {
         document.getElementById("result_IMG").src = "https://c.tenor.com/TTJC1M_crYYAAAAC/mahfuzur-rahman-shukh-pakhi-re.gif";
     }
     if (score > 50 && 50 <= 80) {
-        resultMessage.innerHTML = "বুকে আসেন! আমরা যথেষ্ট ক্লোজ। <br> অবশ্যই চেষ্টা করলে আমাদের বন্ধুত্ব আরও স্ট্রং হবে কোনো একদিন। 😍";
+        resultMessage.innerHTML = "বুকে আসেন! আমরা যথেষ্ট ক্লোজ। অবশ্যই চেষ্টা করলে আমাদের বন্ধুত্ব আরও স্ট্রং হবে কোনো একদিন। 😍";
         document.getElementById("result_IMG").src = "https://c.tenor.com/Azh_WjSSMsEAAAAC/mahfuzur-rahman-bangladesh.gif";
     }
     if (score > 80 && 80 <= 100) {
